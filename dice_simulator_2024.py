@@ -52,14 +52,15 @@ def dice_rolling():
    
 def quit1():    
     try:
-        quit1 = input('\nContinue?(y/n): ' )
-        if quit1 == 'n':
-            print('GOODBYE from Dice Simulator 2024.\n')
-            quit()
-        elif quit1 == 'y':
-            dice_rolling()
-        else:
-            print('Continue?(y/n): ') 
+        while True:
+            quit1 = input('\nContinue?(y/n): ' )
+            if quit1 == 'n':
+                print('GOODBYE from Dice Simulator 2024.\n')
+                quit()
+            elif quit1 == 'y':
+                dice_rolling()
+            else:
+                print("Only: 'y' or 'n'") 
     except ValueError:
         print('Quit Value Error')
 
@@ -67,4 +68,3 @@ if __name__ == '__main__':
     os.system('cls')
     print('Dice Simulator 2024\n')
     dice_rolling()
-
