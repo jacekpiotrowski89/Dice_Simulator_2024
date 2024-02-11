@@ -47,7 +47,7 @@ def dice_rolling():
                 print(f"Roll: {roll}")
             quit1()
     except ValueError:
-        print('value error')
+        print('Dice rolling Value Error')
         dice_number(dice_choice)
    
 def quit1():    
@@ -59,9 +59,9 @@ def quit1():
         elif quit1 == 'y':
             dice_rolling()
         else:
-            quit()
+            print('Continue?(y/n): ') 
     except ValueError:
-        print(':]')
+        print('Quit Value Error')
 
 if __name__ == '__main__':
     os.system('cls')
